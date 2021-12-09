@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- esp1.html                                           Nancy Frutis -->
+<!-- This page performs an ESP test by displaying a random number. -->
+<!-- ============================================================= -->
+
+<html>
+ <head>
+   <title> ESP Test </title>
+   <script type="text/javascript">
+     function PickNumber() 
+     // Results: displays a random number between 1 and 20 in outputDiv
+     {
+       var number;
+       
+       number = Math.ceil(Math.random()*20);           
+       document.getElementById('outputDiv').innerHTML = 
+           "My number was " + number + ".  Were you correct?";
+     }
+   </script> 
+ </head>
+
+ <body>
+   <div style="text-align:center">
+     <h2>ESP Test</h2>
+     <p>
+       Think of a number between 1 and 20, then click the button to see 
+       if you were right.
+     </p>
+     <input type="button" value="Click to see the number" 
+            onclick="PickNumber();">
+     <hr>
+     <div id="outputDiv"></div>
+   </div>
+ </body>
+</html>
